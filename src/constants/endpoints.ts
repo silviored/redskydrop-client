@@ -64,6 +64,7 @@ export const ENDPOINTS = {
 
   PRODUCTS: {
     GET_ALL: `/produtos`,
+    GET_HOME: `/produtos/home`,
     GET: (id: string) => `/produtos/${id}`,
   },
 

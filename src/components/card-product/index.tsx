@@ -43,7 +43,6 @@ export function CardProduct({
   title,
   id,
   viewType,
-  key,
   showBlingBtn,
   showQty,
   showQtySelector,

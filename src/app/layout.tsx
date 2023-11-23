@@ -24,6 +24,7 @@ export default function RootLayout({
     <html lang='en'>
       <Script src='/assets/js/argon-dashboard-tailwind.js' async></Script>
       <Script src='https://kit.fontawesome.com/42d5adcbca.js'></Script>
+      <title>RedSky Dropshipping</title>
       <body className={openSans.className}>
         <Providers>{children}</Providers>
       </body>

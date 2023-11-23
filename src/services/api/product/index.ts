@@ -5,21 +5,33 @@ import apiInstance from '@/services/api/instance';
 import { handleErrorMessage } from '../errors';
 
 export const getAll = async ({ skip, take, categoriaid,
-nome,
-subcategoriaid }: PaginationRequestApi) => {
+  nome,
+  subcategoriaid }: PaginationRequestApi) => {
   try {
     const responseGetAll = await apiInstance.get(
       ENDPOINTS.PRODUCTS.GET_ALL, {
-        params: {
-          skip,
-          take,
-          situacao: 'active',
-          categoriaid,
-          nome,
-          subcategoriaid
-        }
-      });
+      params: {
+        skip,
+        take,
+        situacao: 'active',
+        categoriaid,
+        nome,
+        subcategoriaid
+      }
+    });
     return responseGetAll.data.data;
+  } catch (loginError) {
+    const axiosError = loginError as AxiosError;
+    return Promise.reject(handleErrorMessage({ axiosError }));
+  }
+};
+
+export const getAllHome = async ({ }: PaginationRequestApi) => {
+  try {
+    const responseGetAll = await apiInstance.get(
+      ENDPOINTS.PRODUCTS.GET_HOME, {
+    })
+    return responseGetAll.data;
   } catch (loginError) {
     const axiosError = loginError as AxiosError;
     return Promise.reject(handleErrorMessage({ axiosError }));
