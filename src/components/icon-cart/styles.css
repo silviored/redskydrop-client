@@ -1,0 +1,23 @@
+.container-badge-icon-cart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background: var(--bg-red-400);
+  width: 1.6rem;
+  height: 1.6rem;
+  position: absolute;
+  top: -16px;
+  right: 16px;
+  z-index: 9999;
+}
+.text-badge-icon-cart {
+  font-size: 0.75rem;
+  font-weight: bold;
+  color: #fff;
+}
+.container-icon-cart {
+ display: flex;
+ align-items: center;
+ position: relative;
+}

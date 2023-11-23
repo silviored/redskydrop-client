@@ -1,0 +1,14 @@
+.container-forgot-password {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container-forgot-password-form {
+  width: 90vw;
+  max-width: 500px;
+  @media (min-width: 1024px) {
+    width: 500px;
+  }
+}

@@ -1,0 +1,8 @@
+.tutorials-container {
+  display: grid;
+  gap: 1rem;
+  padding: 1rem;
+  @media (min-width: 1024px) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}

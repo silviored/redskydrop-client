@@ -1,0 +1,12 @@
+.card-container {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  padding: 1rem;
+}
+.container-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}

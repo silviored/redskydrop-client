@@ -1,0 +1,33 @@
+.container-cart {
+  padding: 1rem;
+}
+.page-title {
+  font-size: 22px;
+}
+.container-info {
+  display: flex;  
+  flex-direction: column;
+  padding: 0 1rem;
+}
+.wrapper-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.product-container-info-page {
+  width: 100%;
+  @media (min-width: 1024px) {
+    width: 300px;
+    margin-right: 30px;
+  };
+}
+.product-container-wrapper-resume {
+  display: block;
+  @media (min-width: 1024px) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  };
+}

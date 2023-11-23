@@ -1,0 +1,16 @@
+.container-select-plan {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 30px;
+  background: linear-gradient(
+    to bottom,
+    rgb(247, 85, 53) 0%,
+    rgb(250, 41, 42) 30%,
+    white 30%,
+    white 100%
+  );
+}
+
+.container-logo {
+  margin: 2rem 0;
+}
