@@ -45,7 +45,9 @@ export default function ForgotPassword() {
       <div className='flex h-full flex-col '>
         <div className='flex h-full flex-col items-center justify-center'>
           <div className='bg-white rounded-2xl shadow-2xl container-logo flex items-center justify-center'>
-            <img src="/assets/img/logos/logo.png" alt="" width={250} style={{ margin: '0 auto' }} />
+            <Link href='/'>
+              <img src="/assets/img/logos/logo.png" alt="" width={250} style={{ margin: '0 auto' }} />
+            </Link>
           </div>
           <div className='container-form container'>
             <div className='flex flex-wrap '>
@@ -77,7 +79,7 @@ export default function ForgotPassword() {
                       <div className='flex flex-col items-center justify-end lg:flex-row'>
                         <p className='mb-0 mt-4 leading-normal text-white'>
                           Já tem conta?{' '}
-                          <Link href='/' className='text-red-600'>
+                          <Link href='/login' className='text-red-600'>
                             Login
                           </Link>
                         </p>

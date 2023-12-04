@@ -94,7 +94,9 @@ export default function Login() {
       <div className='flex h-full flex-col '>
         <div className='flex h-full flex-col items-center justify-center'>
           <div className='bg-white rounded-2xl shadow-2xl container-logo flex items-center justify-center'>
-            <img src="/assets/img/logos/logo.png" alt="" width={250} style={{ margin: '0 auto' }} />
+            <Link href='/' >
+              <img src="/assets/img/logos/logo.png" alt="" width={250} style={{ margin: '0 auto' }} />
+            </Link>
           </div>
 
           <div className='container-form container'>
