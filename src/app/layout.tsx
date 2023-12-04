@@ -1,13 +1,13 @@
 'use client';
-import './globals.css';
-import '../assets/css/argon-dashboard-tailwind.css';
-import '../assets/css/nucleo-svg.css';
-import '../assets/css/nucleo-icons.css';
-import '../assets/css/perfect-scrollbar.css';
-import '../assets/css/tooltips.css';
+import { Providers } from '@/components/providers';
 import { Open_Sans } from 'next/font/google';
 import Script from 'next/script';
-import { Providers } from '@/components/providers';
+import '../assets/css/argon-dashboard-tailwind.css';
+import '../assets/css/nucleo-icons.css';
+import '../assets/css/nucleo-svg.css';
+import '../assets/css/perfect-scrollbar.css';
+import '../assets/css/tooltips.css';
+import './globals.css';
 
 const openSans = Open_Sans({
   subsets: ['latin'],

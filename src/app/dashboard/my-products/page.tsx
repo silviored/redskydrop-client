@@ -1,5 +1,5 @@
 "use client"
-import { CardProduct } from '@/components/card-product'
+import { CardProduct } from '@/components/card-product2'
 import './styles.css'
 import { ApiService } from '@/services'
 import { Loading } from '@/components/loading'

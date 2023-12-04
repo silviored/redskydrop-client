@@ -3,8 +3,6 @@ import { useProduct } from '@/contexts/product';
 import { Input } from '@/components/input';
 import { ChangeEvent } from 'react';
 import './styles.css';
-import Image from "next/image";
-import Link from "next/link";
 
 enum ViewType {
   list = "list",
@@ -21,15 +19,12 @@ type CardProductsProps = {
   disabledButton?: boolean;
   disabledContainer?: boolean;
   viewType?: string;
-  key?: number;
-  showBlingBtn?: boolean;
-  showQty?: boolean;
-  showQtySelector?: boolean;
-  showStock?: boolean;
-  showAddToCart?: boolean;
-  freeShipping?: boolean;
-  discount?: number;
-  indicated?: number;
+  key?: number
+  showBlingBtn?: boolean
+  showQty?: boolean
+  showQtySelector?: boolean
+  showStock?: boolean
+  showAddToCart?: boolean
   onCLickAddToBling?: (data: any) => void;
   onCLickAddToCart?: (data: any) => void;
   onCLickBuyNow?: (data: any) => void;
@@ -53,9 +48,6 @@ export function CardProduct({
   showQtySelector,
   showAddToCart,
   showStock,
-  freeShipping,
-  discount = 0,
-  indicated
 }: CardProductsProps) {
   const { products, updateProduct, removeProduct } = useProduct()
   return (
@@ -137,62 +129,6 @@ export function CardProduct({
             </div>
           </div>
         </div>
-      ) : ""}
-      {viewType == "minimal" ? (
-        <Link href={"/product-page/" + id}>
-          <div className="flex flex-col group hover:z-10">
-            <div className="border border-gray-300 bg-white max-w-[220px] overflow-hidden relative hover:border-red-650">
-              <div className="relative">
-                <Image
-                  src={cover_image_url || "/assets/img/logos/image.png"}
-                  alt={title}
-                  width={220}
-                  height={200}
-                />
-                {indicated &&
-                  <div className="absolute top-0 mt-2 bg-red-650 px-1">
-                    <span className="text-white text-xs font-semibold">
-                      Indicado
-                    </span>
-                  </div>
-                }
-                {discount > 0 &&
-                  <div className="bg-yellow-400 absolute top-0 right-0 p-1">
-                    <span className="text-red-650 text-sm font-semibold">
-                      {discount}%
-                    </span>
-                  </div>
-                }
-                {freeShipping &&
-                  <div className="bg-blue-800 absolute bottom-0 px-2 rounded-r-lg mb-2">
-                    <span className="text-white text-xs">
-                      FRETE GRÁTIS acima de R$ 10
-                    </span>
-                  </div>
-                }
-              </div>
-              <div className="p-2">
-                <p className="text-lg line-clamp-2">{title}</p>
-                <div className="flex justify-between">
-                  <div className="flex items-start text-red-650">
-                    <span className="text-sm">R$</span>
-                    <span className="text-base">{price}</span>
-                  </div>
-                  {/*    <span className="text-sm text-gray-600">
-                    {stock} em estoque
-                  </span> */}
-                </div>
-              </div>
-            </div>
-            <div className="h-[25px] max-w-[220px]">
-              <div className="bg-red-650 text-center w-full hidden group-hover:block">
-                <span className="text-white text-base font-semibold">
-                  Encontrar itens similares
-                </span>
-              </div>
-            </div>
-          </div>
-        </Link>
       ) : ""}
     </div>
   )

@@ -7,6 +7,7 @@ const nextConfig = {
         hostname: 'i.im.ge',
       },
     ],
+    domains: ['red-sky-drop.s3.sa-east-1.amazonaws.com', 'i.im.ge'],
   },
 };
 

@@ -2,6 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+.pt-body {
+  background-color: #F5F5F5;
+  padding-top: 170px;
+
+  @media (max-width: 640px) {
+    padding-top: 140px;
+  }
+}
+
 .container-logo {
   @media (min-width: 1024px) {
     margin-top: 1rem;
@@ -18,7 +27,6 @@
     padding-right: 1.5rem !important;
   }
 }
-
 
 .bg-red-400 {
   background-color: rgb(245, 54, 92) !important;
@@ -41,6 +49,12 @@
       white 100%);
 }
 
+.bg-gradient-header {
+  background: linear-gradient(to bottom,
+      rgb(250, 41, 42) 0%,
+      rgb(247, 85, 53) 100%);
+}
+
 .px-l-5 {
   padding-left: 1rem !important;
   padding-right: 1rem !important;
@@ -56,7 +70,6 @@
   --bg-red-600: rgb(164, 8, 39) !important;
   --bg-red-600a: rgba(164, 8, 39, 0.733) !important;
 }
-
 
 .container-terms-and-conditions {
   overflow: auto;

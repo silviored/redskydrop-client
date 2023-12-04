@@ -10,7 +10,7 @@ import { toast } from 'react-toastify'
 import { ROUTES } from '@/constants/routes'
 import { currencyMask } from '@/utils/mask'
 import { Input } from '@/components/input'
-import { CardProduct } from '@/components/card-product'
+import { CardProduct } from '@/components/card-product2'
 
 export default function Cart({ params }: { params: { id: string } }) {
   const navigation = useRouter()

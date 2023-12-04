@@ -1,71 +1,63 @@
-body {
-    margin: 0;
-    font-family: 'Arial', sans-serif;
-    color: black;
-}
-
-header {
-    position: sticky;
-    width: 100%;
-    z-index: 1000;
-}
-
-nav {
-    display: flex;
-    align-items: center;
-    padding: 15px;
-    justify-content: space-around;
-}
-
 .logo {
-    font-size: 1.5em;
-    font-weight: bold;
-    border-radius: 10px;
+  font-size: 1.5em;
+  font-weight: bold;
+  border-radius: 10px;
 }
 
 ul {
-    list-style: none;
-    display: flex;
+  list-style: none;
+  display: flex;
 }
 
 li {
-    margin: 0 15px;
+  margin: 0 15px;
 }
 
 a {
-    text-decoration: none;
-    color: #333;
-    /* Change this to your preferred text color */
+  text-decoration: none;
+  color: #333;
+  /* Change this to your preferred text color */
 }
 
 .search-bar {
-    display: flex;
+  display: flex;
 }
 
 input {
-    padding: 8px;
-}
-
-input[type="text"] {
-    width: 250px;
-    border: 1px solid rgb(180, 180, 180);
-    border-radius: 10px;
+  padding: 8px;
 }
 
 button {
-    padding: 8px;
-    background-color: #f90;
-    /* Change this to your preferred button color */
-    color: #fff;
-    /* Change this to your preferred text color */
-    border: none;
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .logo img {
-    height: 70px;
+  height: 70px;
 }
 
-.container section {
-    padding: 50px 0;
+[class^="number-slide"],
+[class*=" number-slide"] {
+  background: grey;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 50px;
+  color: #fff;
+  font-weight: 500;
+  height: 300px;
+  width: 100%;
+}
+
+.thumbnail .keen-slider__slide {
+  margin-top: 10px;
+  height: 100px;
+  width: 100px;
+}
+
+.thumbnail .keen-slider__slide {
+  cursor: pointer;
+}
+
+.thumbnail .keen-slider__slide.active {
+  border: 2px solid #f6422b;
 }

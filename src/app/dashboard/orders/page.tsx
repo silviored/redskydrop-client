@@ -1,7 +1,6 @@
 "use client"
 import { useProduct } from '@/contexts/product'
 import './styles.css'
-import { CardProduct } from './_components/card-product'
 import { ChangeEvent, useCallback, useState } from 'react'
 import { Loading } from '@/components/loading'
 import { ApiService } from '@/services'

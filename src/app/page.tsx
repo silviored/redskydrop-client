@@ -1,11 +1,13 @@
 'use client';
 
+import { Header } from '@/components/header';
+import './styles.css';
+
+import CardsList from '@/components/cards-list';
+
 import { ApiService } from '@/services';
 import { useCallback, useEffect, useState } from 'react';
 import { toast } from 'react-toastify';
-import './styles.css';
-import { CardProduct } from '@/components/card-product';
-
 
 export default function Home() {
     const [productsDestaque, setProductsDestaque] = useState<ProductResponseApi[]>([])
@@ -30,62 +32,20 @@ export default function Home() {
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
     return (
-        <div className='bg-gradient-black-white container-fluid '>
-            <header className='text-white'>
-                <nav>
-                    <div className="logo bg-white">
-                        <img src="./assets/img/logos/logo.png" alt="" />
-                    </div>
-                    <div>
-                        <p>Seja Bem vindo</p>
-                    </div>
-                    <div>
-                        <div className="search-bar">
-                            <input type="text" placeholder="Digite o produto que deseja" />
-                            <button type="submit">Pesquisar</button>
-                        </div>
-                    </div>
-                </nav>
-            </header>
-            <div className="container">
-                <section >
-                    <h5 className='text-white'>Em destaque</h5>
-                    <div className="container-cart-wrapper flex">
-                        <div className='container-card-products'>
-                            {productsDestaque?.map((product, index) => (
-                                <CardProduct
-                                    key={index}
-                                    id={product.id}
-                                    cover_image_url={product.fotos?.[0]}
-                                    price={product.preco}
-                                    title={product.nome}
-                                    stock={product.estoque}
-                                    showStock={true}
-                                />
-                            ))}
-                        </div>
-                    </div >
-                </section>
-                <section className='pt-4'>
-                    <h5>Mais vendidos</h5>
-                    <div className="container-cart-wrapper flex">
-                        <div className='container-card-products'>
-                            {productsMaisVendidos?.map((product, index) => (
-                                <CardProduct
-                                    key={index}
-                                    id={product.id}
-                                    cover_image_url={product.fotos?.[0]}
-                                    price={product.preco}
-                                    title={product.nome}
-                                    stock={product.estoque}
-                                    showStock={true}
-                                />
-                            ))}
-                        </div>
-                    </div >
-                </section>
+        <>
+            <Header />
+            <div className='mb-6 pt-body'>
+                <div className="xl:px-24 lg:px-24 md:px-24 sm:px-2 xs:px-2">
+                    <CardsList
+                        products={productsDestaque}
+                        title="Produtos Destaques"
+                    />
+                    <CardsList
+                        products={productsMaisVendidos}
+                        title="Produtos mais vendidos"
+                    />
+                </div>
             </div>
-
-        </div>
+        </>
     )
 }

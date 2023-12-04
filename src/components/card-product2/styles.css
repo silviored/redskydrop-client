@@ -1,0 +1,109 @@
+.container-card-product {
+  width: 186px;
+  cursor: pointer !important;
+  position: relative;
+}
+
+.container-card-product:hover {
+  background: whitesmoke;
+}
+
+.container-card-product:hover .product-img {
+  opacity: 0.7;
+}
+
+.wrapper-content-product {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.container-cover-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-height: 400px;
+  overflow: hidden;
+}
+
+.container-cover-image img {
+  width: 100%;
+  max-width: 220px;
+  object-fit: cover;
+}
+
+.container-buttons-card-product {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.container-buttons-card-product button {
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-add-cart:hover {
+  background-color: #b9092c !important;
+}
+
+.btn-buy-now:hover {
+  background-color: #b9092c !important;
+}
+
+.container-info {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 15px;
+}
+
+.container-info-title {
+  width: 100%;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  white-space: pre-wrap;
+  font-size: .875rem;
+  height: 45px;
+}
+
+.container-buttons-card-product {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem
+}
+
+.container-buttons-card-product button:disabled {
+  background-color: var(--bg-red-600) !important;
+  cursor: default !important;
+}
+
+.price {
+  color: red;
+  font-size: 1rem;
+}
+
+.stock {
+  color: gray;
+  font-size: .75rem;
+  line-height: 1rem;
+}
+
+
+.container-info-extra {
+  display: grid;
+  grid-template-columns: 50% auto;
+  width: 100%;
+}
+
+.page-title {
+  font-size: 22px;
+}
+
+.btn-addToCart {
+  position: absolute;
+  z-index: 1;
+  right: 0;
+}
